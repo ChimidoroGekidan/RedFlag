@@ -1,13 +1,13 @@
 using UnityEngine;
-
-public class PlayerJump : MonoBehaviour
+ 
+public class NewBehaviourScript : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-
+ 
     private int c = 0;
     private int c2 = 2;
-
-    public void Jump()
+ 
+    public void DoAction()
     {
         if (c < c2)
         {
@@ -15,8 +15,8 @@ public class PlayerJump : MonoBehaviour
             rb.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
         }
     }
-
-    public void Land()
+ 
+    public void DoAction2()
     {
         c2 = 0;
     }
