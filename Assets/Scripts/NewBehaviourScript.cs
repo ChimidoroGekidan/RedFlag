@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D obj;
 
     private int c = 0;
     private int c2 = 2;
@@ -20,9 +20,9 @@ public class NewBehaviourScript : MonoBehaviour
         if (c < c2)
         {
             c++;
-            if (rb != null)
+            if (obj != null)
             {
-                rb.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
+                obj.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
             }
             Debug.Log("ジャンプ成功");
         }
